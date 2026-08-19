@@ -8,6 +8,9 @@ import FinancingPartners from "./blocks/financial-partners";
 import VideoAndLocation from "./blocks/video";
 import ExpandingGallery from "./blocks/expanding-gallery";
 import FounderSection from "./blocks/founder";
+import Example from "./blocks/CTA-section";
+import ContactForm from "./blocks/form";
+import FooterComplex from "./blocks/footer";
 
 export default function Home() {
   return (
@@ -22,6 +25,8 @@ export default function Home() {
           <VideoAndLocation />
           <ExpandingGallery />
           <FounderSection />
+          <Example />
+          <FooterComplex />
         </>
      </div>
      );

@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const images = [
-  "/Hero-Images/hero-1.jpg",
+  "/Hero-Images/Hero-1.jpg",
   "/Hero-Images/Hero-2.jpg",
   "/Hero-Images/Hero-3.jpg",
+  "/Hero-Images/Hero-4.jpg",
 ];
 
 export default function HeroSplit() {

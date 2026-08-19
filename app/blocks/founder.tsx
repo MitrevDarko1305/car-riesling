@@ -45,9 +45,9 @@ export default function FounderSection() {
 
            {/* TODO: swap for the founder's actual name */}
           <div className="mt-8 font-heading text-xl font-bold text-light">
-            Kadria 
+            Roman
             <span className="mt-1 block text-sm font-normal text-light/60">
-              Gründer, Fair Cars Stuttgart
+              Gründer, Car-Riesling Stuttgart
             </span>
           </div>
 

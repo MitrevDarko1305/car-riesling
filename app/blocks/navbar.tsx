@@ -57,7 +57,7 @@ export default function ScrollNavbar() {
       <nav
         className={`fixed top-0 left-0 bg-background w-full flex items-center justify-between px-4 md:px-16 lg:px-24 xl:px-32 transition-all duration-500 z-50 ${
           isScrolled
-            ? "bg-white shadow-md text-light/50 backdrop-blur-lg py-3 md:py-1.5"
+            ? "bg-light shadow-md text-light/50 backdrop-blur-lg py-3 md:py-1.5"
             : "py-4 md:py-4"
         }`}
       >
