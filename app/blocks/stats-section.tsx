@@ -106,7 +106,7 @@ export function LogoCloudAnimated({
         </motion.div>
 
         <div
-          className="relative overflow-hidden"
+          className="relative overflow-hidden w-full"
           style={{
             maskImage:
               "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
