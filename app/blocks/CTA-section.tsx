@@ -20,13 +20,13 @@ export default function Example() {
             </div>
           </div>
         </div>
-        <div className="-mt-12 -ml-16 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <img
-            alt=""
-            src="Hero-Images/CTA-Image.png"
-            className="w-3xl max-w-none  bg-gray-800 shadow-xl ring-1 ring-white/10 sm:w-180"
-          />
-        </div>
+       <div className="relative mt-8 lg:-mt-12 lg:-ml-16 p-4 lg:p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 overflow-hidden">
+        <img
+        alt="Car-Riesling CTA"
+        src="/Hero-Images/CTA-Image.png"
+       className="w-full max-w-2xl  bg-gray-800 shadow-xl ring-1 ring-white/10"
+       />
+      </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-[14px] text-light/50 lg:max-w-lg">

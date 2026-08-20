@@ -132,7 +132,7 @@ export function LogoCloudAnimated({
                     },
                   }
             }
-            className="flex min-w-full shrink-0 items-center gap-10"
+            className="flex min-w-full  shrink-0 items-center gap-10"
           >
             {[1, 2, 3].map((setNumber) =>
               logos.map(({ name, icon: Icon }, index) => (

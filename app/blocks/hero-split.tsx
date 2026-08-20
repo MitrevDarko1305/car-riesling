@@ -23,7 +23,7 @@ export default function HeroSplit() {
   return (
     <section className="relative flex flex-col md:flex-row min-h-[calc(85vh)] pt-24 w-full bg-black overflow-hidden">
       {/* Left: Text */}
-      <div className="flex flex-col justify-center px-6 md:px-16 lg:px-24  md:w-1/2 z-10">
+      <div className="flex flex-col justify-center px-6 md:px-16 lg:px-24  md:w-1/2 z-10 min-w-0">
         <span className="text-red-600 font-medium tracking-wide capitalise text-sm mb-2">
           Premium Cars, Stuttgart
         </span>
