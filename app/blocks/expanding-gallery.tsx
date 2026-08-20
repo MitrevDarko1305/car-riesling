@@ -47,20 +47,20 @@ export default function ExpandingGallery() {
   ];
 
   return (
-    <section className="w-full pt-28 pb-24 max-w-7xl px-16">
-      <h1 className="text-4xl text-light font-extrabold text-start">
-        Our current inventory
+    <section className="w-full pt-16 pb-24 max-w-7xl md:px-16 px-2">
+      <h1 className="text-4xl text-light font-extrabold md:text-start text-center">
+        Our Current Inventory
       </h1>
 
-      <p className="text-md text-light/50 text-start mt-2">
+      <p className="md:text-md text-[16px] text-light/50 md:text-start text-center md:mt-2 mt-8">
         A look at the vehicles currently on our lot - each one inspected,detailed, and ready for a test drive
       </p>
 
-     <div className="flex items-center gap-2 h-[400px] w-full max-w-6xl mt-10 mx-auto">
+     <div className="flex flex-col md:flex-row items-center gap-2 h-[400px] w-full max-w-6xl  mt-10 mx-auto">
       {items.slice(0, 3).map((item, i) => (
      <div
       key={i}
-      className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full overflow-hidden"
+      className="relative group flex-grow transition-all md:w-58 w-full h-[400px]  duration-500 hover:w-full overflow-hidden"
       >
       <img
         src={item.src}

@@ -6,9 +6,9 @@ export default function FinancingPartners() {
   ];
 
   return (
-    <section className="bg-background pt-12 pb-20 px-2 md:px-16 lg:px-24">
+    <section className="bg-background pt-12 pb-24 px-2 md:px-16 lg:px-24">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-light mb-4">
+        <h2 className="text-4xl md:text-4xl font-extrabold text-light md:mb-4 mb-6">
           Financing partners
         </h2>
         <p className="text-light/50 text-sm">

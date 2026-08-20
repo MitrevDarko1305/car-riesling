@@ -13,7 +13,7 @@ export default function Highlights() {
         <span className="text-accent font-medium tracking-wide capitalise text-sm">
           What We Offer
         </span>
-        <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">
+        <h2 className="text-4xl md:text-4xl font-extrabold text-white mt-2">
           More than just a dealership
         </h2>
       </div>
