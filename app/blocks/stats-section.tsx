@@ -68,6 +68,7 @@ export function LogoCloudAnimated({
   logos?: Logo[];
 }) {
   const shouldReduceMotion = useReducedMotion();
+  const scrollDistance = SCROLL_DISTANCE_PER_LOGO * logos.length;
 
   return (
     <section className="overflow-hidden bg-black py-28">
@@ -84,67 +85,48 @@ export function LogoCloudAnimated({
           <p className="text-lg text-light/50">{description}</p>
         </motion.div>
 
-        <div
-          className="relative overflow-hidden w-full overflow-x-hidden"
-          style={{
-            contain: "paint",
-            maskImage:
-              "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
-          }}
-        >
-          <motion.div
-            animate={
-              shouldReduceMotion
-                ? { x: 0 }
-                : { x: [0, -SCROLL_DISTANCE_PER_LOGO * logos.length] }
+        {/* Mobile: static grid, no animation */}
+        <div className="grid grid-cols-3 gap-8 md:hidden">
+          {logos.map(({ name, icon: Icon }) => (
+            <div key={name} className="flex items-center justify-center">
+              <Icon
+                aria-label={name}
+                className="h-10 w-10 text-light/50 transition-colors hover:text-white"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop: animated marquee */}
+        <div className="hidden md:block relative overflow-hidden w-full">
+          <div
+            className="flex min-w-full shrink-0 items-center gap-10 animate-marquee"
+            style={
+              {
+                "--marquee-distance": `${scrollDistance}px`,
+                "--marquee-duration": `${ANIMATION_DURATION}s`,
+              } as React.CSSProperties
             }
-            transition={
-              shouldReduceMotion
-                ? { duration: 0 }
-                : {
-                    x: {
-                      duration: ANIMATION_DURATION,
-                      ease: "linear",
-                      repeat: Infinity,
-                      repeatType: "loop",
-                    },
-                  }
-            }
-            className="flex min-w-full  shrink-0 items-center gap-10"
-            style={{willChange:"transform"}}
           >
             {[1, 2, 3].map((setNumber) =>
-              logos.map(({ name, icon: Icon }, index) => (
-                <motion.div
+              logos.map(({ name, icon: Icon }) => (
+                <div
                   key={`${setNumber}-${name}`}
-                  initial={
-                    shouldReduceMotion ? { opacity: 1 } : { opacity: 0, scale: 0.8 }
-                  }
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={
-                    shouldReduceMotion
-                      ? { duration: 0 }
-                      : { delay: index * STAGGER_DELAY, duration: 0.4 }
-                  }
                   className="flex shrink-0 items-center justify-center px-4"
                 >
-                  <motion.div
-                    whileHover={
-                      shouldReduceMotion ? {} : { scale: 1.1, rotate: 5 }
-                    }
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
+                  <div className="transition-transform duration-300 hover:scale-110 hover:rotate-3">
                     <Icon
                       aria-label={name}
                       className="h-11 w-11 text-light/50 transition-colors cursor-pointer hover:text-white"
                     />
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               ))
             )}
-          </motion.div>
+          </div>
+
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10" />
         </div>
       </div>
     </section>

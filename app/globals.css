@@ -31,5 +31,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Marquee Track */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--marquee-distance)));
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 25s) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
 
 
