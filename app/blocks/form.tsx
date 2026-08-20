@@ -32,7 +32,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="bg-background border border-white/10  p-8 md:p-8 max-w-md mx-auto w-full">
+    <div className="bg-background border border-white/10 pt-12  p-2 md:p-8 max-w-md mx-auto w-full">
       <h2 className="text-xl font-bold text-white mb-2">Get in Touch</h2>
       <p className="text-light/50 text-[14px] mb-8">
         Have a question about a vehicle or want to schedule a test drive?
@@ -41,7 +41,7 @@ export default function ContactForm() {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label className="block text-sm font-medium text-light/50 mb-2">
+          <label className="block text-sm font-medium text-start text-light/50 mb-2 ">
             Full Name
           </label>
           <input
@@ -56,7 +56,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-light/50 mb-2">
+          <label className="block text-sm font-medium text-start text-light/50 mb-2">
             Email Address
           </label>
           <input
@@ -89,7 +89,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="w-full bg-accent mt-6 hover:bg-background cursor-pointer text-light text-[13px] font-extrabold py-3 transition-colors disabled:opacity-50"
+          className="w-full bg-accent md:mt-6 mt-4 mb-7 md:mb-0 hover:bg-background cursor-pointer text-light text-[13px] font-extrabold py-3 transition-colors disabled:opacity-50"
         >
           {status === "sent" ? "Message Sent" : "Send Message"}
         </button>

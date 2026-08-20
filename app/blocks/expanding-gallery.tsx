@@ -47,7 +47,7 @@ export default function ExpandingGallery() {
   ];
 
   return (
-    <section className="w-full pt-16 pb-24 max-w-7xl md:px-16 px-2">
+    <section className="w-full md:pb-24 pt-16 pb-16 max-w-7xl md:px-16 px-2">
       <h1 className="text-4xl text-light font-extrabold md:text-start text-center">
         Our Current Inventory
       </h1>
