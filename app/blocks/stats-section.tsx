@@ -1,30 +1,9 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
+import { transform } from "next/dist/build/swc";
 import type { IconType } from "react-icons";
 import {
-  SiDuolingo,
-  SiStrava,
-  SiDropbox,
-  SiSpotify,
-  SiAirbnb,
-  SiNetflix,
-  SiFigma,
-  SiNotion,
-  SiZoom,
-  SiUber,
-  SiPaypal,
-  SiShopify,
-  SiIntercom,
-  SiLinear,
-  SiVercel,
-  SiStripe,
-  SiFramer,
-  SiGithub,
-  SiDiscord,
-  SiPinterest,
-  SiTiktok,
-  SiCoinbase,
   SiAudi,
   SiBmw,
   SiPorsche,
@@ -106,8 +85,9 @@ export function LogoCloudAnimated({
         </motion.div>
 
         <div
-          className="relative overflow-hidden w-full"
+          className="relative overflow-hidden w-full overflow-x-hidden"
           style={{
+            contain: "paint",
             maskImage:
               "linear-gradient(to right, transparent, black 20%, black 80%, transparent)",
             WebkitMaskImage:
@@ -133,6 +113,7 @@ export function LogoCloudAnimated({
                   }
             }
             className="flex min-w-full  shrink-0 items-center gap-10"
+            style={{willChange:"transform"}}
           >
             {[1, 2, 3].map((setNumber) =>
               logos.map(({ name, icon: Icon }, index) => (
