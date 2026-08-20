@@ -56,11 +56,11 @@ export default function ExpandingGallery() {
         A look at the vehicles currently on our lot - each one inspected,detailed, and ready for a test drive
       </p>
 
-     <div className="flex flex-col md:flex-row items-center gap-2 h-[400px] w-full max-w-6xl  mt-10 mx-auto">
+     <div className="flex flex-col md:flex-row items-center gap-2 h-[750px] md:h-[400px] w-full max-w-6xl  mt-10 mx-auto">
       {items.slice(0, 3).map((item, i) => (
      <div
       key={i}
-      className="relative group flex-grow transition-all md:w-58 w-full h-[400px]  duration-500 hover:w-full overflow-hidden"
+      className="relative group flex-grow transition-all md:w-58 md:h-[400px] w-full h-[750px]  duration-500 hover:w-full overflow-hidden"
       >
       <img
         src={item.src}
@@ -75,11 +75,11 @@ export default function ExpandingGallery() {
   ))}
 </div>
 
-   <div className="flex items-center gap-2 h-[400px] w-full max-w-6xl mt-2 mx-auto">
+   <div className="flex flex-col md:flex-row items-center gap-2 h-[750px] md:h-[400px] w-full max-w-6xl mt-2 mx-auto">
     {items.slice(3, 6).map((item, i) => (
     <div
       key={i}
-      className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full overflow-hidden"
+      className="relative group flex-grow transition-all md:w-56 w-full h-[750px] md:h-[400px] duration-500 hover:w-full overflow-hidden"
     >
       <img
         src={item.src}
