@@ -18,7 +18,6 @@ export default function Home() {
         <>
           <ScrollNavbar />
           <HeroSplit />
-          <LogoCloudAnimated />
           <AboutSection />
           <Highlights />
           <FinancingPartners />
