@@ -79,10 +79,10 @@ export function LogoCloudAnimated({
           transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-2xl font-extrabold text-light lg:text-3xl">
+          <h2 className="mb-4 text-4xl font-extrabold text-light lg:text-3xl">
             {title}
           </h2>
-          <p className="md:text-lg text-[14px] text-light/50">{description}</p>
+          <p className="md:text-lg text-[16px] text-light/50">{description}</p>
         </motion.div>
 
         {/* Mobile: static grid, no animation */}
@@ -117,7 +117,7 @@ export function LogoCloudAnimated({
                   <div className="transition-transform duration-300 hover:scale-110 hover:rotate-3">
                     <Icon
                       aria-label={name}
-                      className="h-11 w-11 text-light/50 transition-colors cursor-pointer hover:text-white"
+                      className="md:h-11 md:w-11 h-10 w-10 text-light/50 transition-colors cursor-pointer hover:text-white"
                     />
                   </div>
                 </div>
