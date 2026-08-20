@@ -44,7 +44,7 @@ export default function HeroSplit() {
         </div>
 
         {/* Slide indicators */}
-        <div className="flex gap-2 mt-10">
+        <div className="flex gap-2 mt-6 mb-6 md:mt-10">
           {images.map((_, i) => (
             <button
               key={i}
@@ -59,7 +59,7 @@ export default function HeroSplit() {
       </div>
 
       {/* Right: Ken Burns Slideshow */}
-      <div className="relative md:w-1/2 min-h-[50vh] md:min-h-full overflow-hidden">
+      <div className="relative md:w-1/2 aspect-[4/3] md:aspect-auto md:h-auto  overflow-hidden">
         {images.map((src, i) => (
           <div
             key={src}
@@ -77,7 +77,7 @@ export default function HeroSplit() {
                 alt={`Luxury car ${i + 1}`}
                 fill
                 priority={i === 0}
-                className="object-cover"
+                className="md:object-cover"
               />
             </div>
           </div>

@@ -112,7 +112,7 @@ export default function ScrollNavbar() {
           >
             <svg
               className={`h-6 w-6 cursor-pointer ${
-                isScrolled ? "invert" : ""
+                isScrolled ? "text-background" : "text-light"
               }`}
               fill="none"
               stroke="currentColor"

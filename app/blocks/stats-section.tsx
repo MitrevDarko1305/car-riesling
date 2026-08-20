@@ -71,7 +71,7 @@ export function LogoCloudAnimated({
   const scrollDistance = SCROLL_DISTANCE_PER_LOGO * logos.length;
 
   return (
-    <section className="overflow-hidden bg-black py-28">
+    <section className="overflow-hidden bg-black md:pt-28 pt-16 pb-28">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0, y: 20 }}
@@ -82,16 +82,16 @@ export function LogoCloudAnimated({
           <h2 className="mb-4 text-2xl font-extrabold text-light lg:text-3xl">
             {title}
           </h2>
-          <p className="text-lg text-light/50">{description}</p>
+          <p className="md:text-lg text-[14px] text-light/50">{description}</p>
         </motion.div>
 
         {/* Mobile: static grid, no animation */}
-        <div className="grid grid-cols-3 gap-8 md:hidden">
+        <div className="grid grid-cols-3 md:gap-8 gap-6 md:hidden">
           {logos.map(({ name, icon: Icon }) => (
             <div key={name} className="flex items-center justify-center">
               <Icon
                 aria-label={name}
-                className="h-10 w-10 text-light/50 transition-colors hover:text-white"
+                className="md:h-10 md:w-10 h-12 w-12 text-light/50 transition-colors hover:text-white"
               />
             </div>
           ))}
