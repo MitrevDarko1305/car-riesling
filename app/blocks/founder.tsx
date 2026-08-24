@@ -40,7 +40,7 @@ export default function FounderSection() {
 
            <p className="mt-6 text-light leading-relaxed md:text-lg text-[16px] font-semibold">
             {/* TODO: replace with real bio copy */}
-           For over 9 years, Fair Cars Stuttgart has stood for trust and quality in vehicle sales, Every car is personally inspected before it joins our inventory - so you can rely on exactly what you see.
+           For over 9 years, Car-Riesling Stuttgart has stood for trust and quality in vehicle sales, Every car is personally inspected before it joins our inventory - so you can rely on exactly what you see.
           </p>
 
            {/* TODO: swap for the founder's actual name */}
